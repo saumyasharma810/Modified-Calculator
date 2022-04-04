@@ -1,34 +1,40 @@
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
 contract ModifiedCalculator{
-    int result1=0;
-    int result2=0;
+    // Declaring 2 variables first for the calculation of that particular function and other for total history
+    int256 result1=0;
+    int256 result2=0;
 
-    function add(int a, int b) public{
+    function add(int256 a, int256 b) public{
+        // result1 for the simple mathematical operation
         result1 = a + b;
+        // result2 for the total history till now plus this
         result2 += result1;
 
     }
-    function subtract(int a, int b) public{
+    function subtract(int256 a, int256 b) public{
         result1 = a - b;
         result2 += result1;
 
     }
-    function multiply(int a, int b) public{
+    function multiply(int256 a, int256 b) public{
         result1 = a * b;
         result2 += result1;
 
     }
-    function division(int a, int b) public{
+    function division(int256 a, int256 b) public{
         result1 = a / b;
         result2 += result1;
 
     }
-    function calculate() view public returns(int){
+    function calculate() view public returns(int256){
+        // function to return values
         return result1;
 
     }
-    function history() view public returns(int){
+   
+     function history() view public returns(int256){
         return result2;
 
     }
