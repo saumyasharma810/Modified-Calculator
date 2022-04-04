@@ -1,0 +1,35 @@
+pragma solidity ^0.8.0;
+
+contract ModifiedCalculator{
+    int result1=0;
+    int result2=0;
+
+    function add(int a, int b) public{
+        result1 = a + b;
+        result2 += result1;
+
+    }
+    function subtract(int a, int b) public{
+        result1 = a - b;
+        result2 += result1;
+
+    }
+    function multiply(int a, int b) public{
+        result1 = a * b;
+        result2 += result1;
+
+    }
+    function division(int a, int b) public{
+        result1 = a / b;
+        result2 += result1;
+
+    }
+    function calculate() view public returns(int){
+        return result1;
+
+    }
+    function history() view public returns(int){
+        return result2;
+
+    }
+}
