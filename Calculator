@@ -14,17 +14,23 @@ contract ModifiedCalculator{
 
     }
     function subtract(int256 a, int256 b) public{
+        // result1 for the simple mathematical operation
         result1 = a - b;
+         // result2 for the total history till now plus this
         result2 += result1;
 
     }
     function multiply(int256 a, int256 b) public{
+        // result1 for the simple mathematical operation
         result1 = a * b;
+         // result2 for the total history till now plus this
         result2 += result1;
 
     }
     function division(int256 a, int256 b) public{
+        // result1 for the simple mathematical operation
         result1 = a / b;
+         // result2 for the total history till now plus this
         result2 += result1;
 
     }
